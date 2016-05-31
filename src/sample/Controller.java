@@ -24,8 +24,20 @@ public class Controller {
     }
 
     public void onKeyPress(KeyEvent event){
-        if(event.getCode()== KeyCode.ENTER){  ;  // is the button pressed equal to the Enter key
+        if(event.getCode()== KeyCode.ENTER){    // is the button pressed equal to the Enter key
             onGo();
         }
+    }
 
-}}
+    public void onBack(){
+        try{
+            view.getEngine().getHistory().go(-1); // method chaining... Get the web engine, go to it's history and go back by setting -1
+        }catch (Exception e){}
+
+    }
+
+    public void onForward(){
+       try{ view.getEngine().getHistory().go(1);
+    }catch (Exception e) {}
+    }
+}

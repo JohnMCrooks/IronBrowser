@@ -11,9 +11,9 @@
    <children>
       <HBox prefHeight="30.0" prefWidth="600.0">
          <children>
-            <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" text="&lt;" />
-            <Button minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" text="&gt;" />
-            <TextField fx:id="addresBar" minWidth="-Infinity" prefHeight="30.0" HBox.hgrow="ALWAYS" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#onBack" prefHeight="30.0" text="&lt;" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onAction="#onForward" prefHeight="30.0" text="&gt;" />
+            <TextField fx:id="addresBar" minWidth="-Infinity" onKeyPressed="#onKeyPress" prefHeight="30.0" HBox.hgrow="ALWAYS" />
             <Button fx:id="Go" minWidth="-Infinity" mnemonicParsing="false" onAction="#onGo" prefHeight="30.0" text="Go" />
          </children>
       </HBox>
